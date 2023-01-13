@@ -1,19 +1,19 @@
-# Get the user's marks
-marks = int(input("Enter your marks: "))
 
-# Determine the grade based on the marks
-if marks < 25:
-  grade = "F"
-elif marks >= 25 and marks < 45:
-  grade = "E"
-elif marks >= 45 and marks < 50:
-  grade = "D"
-elif marks >= 50 and marks < 60:
-  grade = "C"
-elif marks >= 60 and marks < 80:
-  grade = "B"
+# Get the year from the user
+year = int(input("Enter a year: "))
+
+# Determine if the year is a leap year
+if year % 400 == 0:
+  leap_year = True
+elif year % 100 == 0:
+  leap_year = False
+elif year % 4 == 0:
+  leap_year = True
 else:
-  grade = "A"
+  leap_year = False
 
-# Print the grade
-print("Your grade is:", grade)
+# Print the result
+if leap_year:
+  print(year, "is a leap year")
+else:
+  print(year, "is not a leap year")
